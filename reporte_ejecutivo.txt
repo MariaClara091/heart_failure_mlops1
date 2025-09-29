@@ -1,0 +1,19 @@
+REPORTE EJECUTIVO - SISTEMA DE PREDICCIÓN CARDÍACA
+============================================================
+
+FECHA: 28/09/2025 14:42
+
+DATASET
+• Total registros: 918
+• Porcentaje enfermedad: 55.3%
+• Variables: 7 numéricas, 5 categóricas
+
+MODELO
+• Tipo: No disponible
+• Mejor score: N/A
+
+DATA DRIFT
+• Variables con alto drift: 1
+  - FastingBS: 15.5% diferencia
+
+ESTADO: SISTEMA OPERATIVO

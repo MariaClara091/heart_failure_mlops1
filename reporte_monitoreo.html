@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Monitoreo - Predicción Cardíaca</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .header { text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+        .section { margin: 25px 0; padding: 20px; border-left: 5px solid #667eea; background: #f8f9fa; }
+        .metric-card { background: white; padding: 15px; margin: 10px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: inline-block; min-width: 200px; }
+        .high-drift { color: #e74c3c; font-weight: bold; }
+        .medium-drift { color: #f39c12; }
+        .low-drift { color: #27ae60; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> Reporte de Monitoreo - Sistema de Predicción Cardíaca</h1>
+            <p>Generado el 28/09/2025 14:42</p>
+        </div>
+        
+        <div class="section">
+            <h2> Resumen Ejecutivo</h2>
+            <div class="stats-grid">
+                <div class="metric-card">
+                    <h3>918</h3>
+                    <p>Total Pacientes</p>
+                </div>
+                <div class="metric-card">
+                    <h3>55.3%</h3>
+                    <p>Prevalencia Enfermedad</p>
+                </div>
+                <div class="metric-card">
+                    <h3>642</h3>
+                    <p>Registros Entrenamiento</p>
+                </div>
+                <div class="metric-card">
+                    <h3>276</h3>
+                    <p>Registros Prueba</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Información del Modelo</h2>
+            <p><strong>Tipo:</strong> RandomForest</p>
+            <p><strong>Mejor Score:</strong> 0.932</p>
+            <p><strong>Parámetros Optimizados:</strong> {'clf__max_depth': 5, 'clf__n_estimators': 50}</p>
+        </div>
+        
+        <div class="section">
+            <h2> Análisis de Data Drift</h2>
+            <p><strong>Variables con Alto Drift (>10%):</strong> 1</p>
+            <div class="stats-grid">
+    
+                <div class="metric-card">
+                    <h3 class="low-drift">2.0%</h3>
+                    <p>Age</p>
+                    <small>Train: 53.8 | Test: 52.7</small>
+                </div>
+        
+                <div class="metric-card">
+                    <h3 class="low-drift">4.9%</h3>
+                    <p>Sex</p>
+                    <small>Train: 0.2 | Test: 0.2</small>
+                </div>
+        
+                <div class="metric-card">
+                    <h3 class="medium-drift">7.2%</h3>
+                    <p>ChestPainType</p>
+                    <small>Train: 1.5 | Test: 1.4</small>
+                </div>
+        
+                <div class="metric-card">
+                    <h3 class="low-drift">0.6%</h3>
+                    <p>RestingBP</p>
+                    <small>Train: 132.1 | Test: 133.0</small>
+                </div>
+        
+                <div class="metric-card">
+                    <h3 class="medium-drift">5.8%</h3>
+                    <p>Cholesterol</p>
+                    <small>Train: 202.4 | Test: 190.5</small>
+                </div>
+        
+                <div class="metric-card">
+                    <h3 class="high-drift">15.5%</h3>
+                    <p>FastingBS</p>
+                    <small>Train: 0.2 | Test: 0.3</small>
+                </div>
+        
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Variables Convertidas</h2>
+            <ul>
+    <li><strong>Sex:</strong> {'M': 0, 'F': 1}</li><li><strong>ChestPainType:</strong> {'ATA': 0, 'NAP': 1, 'ASY': 2, 'TA': 3}</li><li><strong>RestingECG:</strong> {'Normal': 0, 'ST': 1, 'LVH': 2}</li><li><strong>ExerciseAngina:</strong> {'N': 0, 'Y': 1}</li><li><strong>ST_Slope:</strong> {'Up': 0, 'Flat': 1, 'Down': 2}</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2> Estado del Sistema</h2>
+            <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 5px;">
+                <h3 style="margin: 0;">SISTEMA OPERATIVO Y ESTABLE</h3>
+                <p style="margin: 10px 0 0 0;">Todos los componentes funcionando correctamente</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
