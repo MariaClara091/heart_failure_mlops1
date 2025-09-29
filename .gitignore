@@ -1,0 +1,32 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos (NO subir el dataset)
+*.csv
+*.json
+
+# Modelos (NO subir modelos grandes)
+*.pkl
+*.joblib
+
+# Reportes generados (opcional subirlos)
+drift_report.html
+reporte_monitoreo.html
+monitoring_report.txt
+reporte_ejecutivo.txt
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
