@@ -1,6 +1,6 @@
 @'
 # Heart Failure Prediction - MLOps Project
-
+## Autores: María Clara Ávila, Mateo José Giraldo y David Alejandro Ibáñez
 ## Descripción
 Sistema completo de Machine Learning Operations para predecir enfermedades cardíacas usando historiales clínicos.
 
